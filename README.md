@@ -2,25 +2,37 @@
 
 # Options
 
-- --symbol=@
+```
+--symbol=@
+How to fill the bars
 
-- --no-colors
+--no-colors
+Don't use colors
 
-- --reverse
+--reverse
+Reverse from asc to desc
 
-- --nreverse
+--no-padding
+Don't print spaces at top and bottom
 
-- --no-padding
+--no-values
+Don't show the values
 
-- --no-values
+--no-percentages
+Don't show the percentages
 
-- --no-percentages
+--numbers
+Number the bars
 
-- --numbers
+--nreverse
+Reverse numbers from asc to desc
 
-- --spacing
+--spacing
+Print a space between each bar
 
-- --density=0.8
+--density=0.8
+Lower number means longer bars
+```
 
 nimbars reads from a data file. It can look like this:
 
