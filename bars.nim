@@ -19,7 +19,6 @@ proc bar*(data: Data, lablen: int, asum: float, conf: Config, index:int) =
     var reset = ""
     var value = ""
     var percentage = ""
-    var units = ""
     var number = ""
     var ps = ""
     var vs = ""
