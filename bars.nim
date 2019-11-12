@@ -6,7 +6,7 @@ import algorithm
 import strformat
 
 # Print a data item
-proc bar*(data: Data, lablen: int, asum: float, conf: Config, index:int, dlen: int) =
+proc bar*(data: Data, lablen: int, asum: float, conf: Config, index:int) =
     var per = (data.amount / asum) * 100
     var line = ""
 
@@ -68,13 +68,10 @@ proc show_bars*(conf: Config) =
         data.reverse()
     let lablen = max_label(data)
     let asum = amount_sum(data)
-    let dlen = data.len()
     var index = 1
-    if conf.nreverse:
-        index = dlen
     for i, d in data:
-        bar(d, lablen, asum, conf, index, dlen)
-        if conf.spacing and i < dlen - 1:
+        bar(d, lablen, asum, conf, index)
+        if conf.spacing and i < data.len() - 1:
             echo ""
         if conf.nreverse:
             index -= 1
