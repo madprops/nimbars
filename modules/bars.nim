@@ -9,8 +9,9 @@ import strformat
 proc bar*(data: Data, lablen: int, asum: float, conf: Config, index:int) =
     var per = (data.amount / asum) * 100
     var line = ""
+    let sd = int(per / conf.density)
 
-    for i in 0..int(per):
+    for i in 0..sd:
         line.add(conf.symbol)
 
     var blue = ""

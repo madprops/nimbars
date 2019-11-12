@@ -16,3 +16,4 @@ type Config* = object
     percentages*: bool
     numbers*: bool
     spacing*: bool
+    density*: float

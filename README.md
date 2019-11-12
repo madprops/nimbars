@@ -20,6 +20,8 @@
 
 - --spacing
 
+- --density=0.8
+
 nimbars reads from a data file. It can look like this:
 
 ```

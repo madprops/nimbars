@@ -17,6 +17,7 @@ proc get_config*(): Config =
     var numbers = false
     var spacing = false
     var symbol = "="
+    var density = 1.0
     
     # Check the arguments
     while true:
@@ -42,6 +43,8 @@ proc get_config*(): Config =
                 spacing = true
             elif arg.key == "symbol":
                 symbol = arg.val
+            elif arg.key == "density":
+                density = parseFloat(arg.val)
         of cmdArgument:
             source = arg.key
         else: discard
@@ -74,9 +77,9 @@ proc get_config*(): Config =
     # Parse each data line
     for line in dlines:
         let d = line.split(" ")
-        data.add(Data(label: d[0..^2].join(" ").strip(), amount: parseFloat(d[^1])))
+        data.add(Data(label:d[0..^2].join(" ").strip(), amount:parseFloat(d[^1])))
 
     # Return the config object
     Config(data:data, source:source, title:title, units:units, colors:colors, reverse:reverse, 
-    nreverse:nreverse, padding:padding, values:values, symbol: symbol, percentages:percentages, 
-    numbers:numbers, spacing: spacing)
+    nreverse:nreverse, padding:padding, values:values, symbol:symbol, percentages:percentages, 
+    numbers:numbers, spacing:spacing, density:density)
