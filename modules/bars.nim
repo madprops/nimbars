@@ -69,6 +69,8 @@ proc show_bars*(conf: Config) =
     let lablen = max_label(data)
     let asum = amount_sum(data)
     var index = 1
+    if conf.nreverse:
+        index = data.len()
     for i, d in data:
         bar(d, lablen, asum, conf, index)
         if conf.spacing and i < data.len() - 1:
