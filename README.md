@@ -31,8 +31,10 @@ ARM 69.384
 RISC-V 58.395
 ```
 
-There are special metadata settings like title and units.
+There are special metadata settings like title and units. These can be omitted.
 
 The rest are data units in the form of "label amount".
+
+Lines can be commented out if they start with a #
 
 Usage: `nimbars mydata.txt [options]`

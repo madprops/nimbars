@@ -60,7 +60,9 @@ proc get_config*(): Config =
     for line in split:
         let ls = line.strip()
         if ls == "": continue
-        if ls.startsWith("title:"):
+        elif ls.startsWith("#"):
+            continue
+        elif ls.startsWith("title:"):
             title = ls.replace("title:", "").strip()
         elif ls.startsWith("units:"):
             units = ls.replace("units:", "").strip()
