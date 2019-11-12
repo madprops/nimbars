@@ -1,5 +1,5 @@
-import modules/utils
-import modules/structs
+import utils
+import structs
 import terminal
 import strutils
 import algorithm

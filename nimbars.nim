@@ -1,5 +1,5 @@
-import bars
-import config
+import modules/bars
+import modules/config
 import strformat
 import terminal
 
