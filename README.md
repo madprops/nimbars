@@ -5,6 +5,11 @@
 ```
 --symbol=@
 How to fill the bars
+Default: =
+
+--density=0.8
+Lower number means longer bars
+Default: 1.0
 
 --no-colors
 Don't use colors
@@ -29,9 +34,6 @@ Reverse numbers from asc to desc
 
 --spacing
 Print a space between each bar
-
---density=0.8
-Lower number means longer bars
 ```
 
 nimbars reads from a data file. It can look like this:
