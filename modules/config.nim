@@ -17,7 +17,7 @@ proc get_config*(): Config =
     var numbers = false
     var spacing = false
     var symbol = "="
-    var density = 1.0
+    var density = 2.5
     
     # Check the arguments
     while true:

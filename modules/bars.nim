@@ -67,12 +67,12 @@ proc show_bars*(conf: Config) =
     if conf.reverse:
         data.reverse()
     let lablen = max_label(data)
-    let asum = amount_sum(data)
+    let highest = highest_amount(data)
     var index = 1
     if conf.nreverse:
         index = data.len()
     for i, d in data:
-        bar(d, lablen, asum, conf, index)
+        bar(d, lablen, highest, conf, index)
         if conf.spacing and i < data.len() - 1:
             echo ""
         if conf.nreverse:

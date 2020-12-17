@@ -14,9 +14,11 @@ proc max_label*(data: seq[Data]): int =
             len = ln
     len 
 
-# Get the total amount
-proc amount_sum*(data: seq[Data]): float =
-    var n = 0.0
-    for i in data:
-        n += i.amount
-    n
+# get the highest data item
+proc highest_amount*(data: seq[Data]): float =
+    var highest = 0.0
+
+    for item in data:
+        if item.amount > highest:
+            highest = item.amount
+    highest
