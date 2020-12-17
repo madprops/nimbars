@@ -1,4 +1,4 @@
-![](http://i.imgur.com/8w6Qkrk.jpg)
+![](https://i.imgur.com/mUL9pTr.jpg)
 
 # Options
 
@@ -9,7 +9,7 @@ Default: =
 
 --density=0.8
 Lower number means longer bars
-Default: 1.0
+Default: 2.5
 
 --no-colors
 Don't use colors
