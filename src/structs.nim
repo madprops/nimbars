@@ -4,16 +4,18 @@ type Data* = object
 
 type Config* = object
     data*: seq[Data]
-    source*: string
     title*: string
     units*: string
+    source*: string
     symbol*: string
-    colors*: bool
+    start_symbol*: string
+    end_symbol*: string
+    density*: float
     reverse*: bool
     nreverse*: bool
     padding*: bool
+    colors*: bool
     values*: bool
     percentages*: bool
     numbers*: bool
     spacing*: bool
-    density*: float

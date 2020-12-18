@@ -8,11 +8,13 @@ import strformat
 # Print a data item
 proc bar*(data: Data, lablen: int, asum: float, conf: Config, index:int) =
     var per = (data.amount / asum) * 100
-    var line = ""
+    var line = conf.start_symbol
     let sd = int(per / conf.density)
 
     for i in 0..sd:
         line.add(conf.symbol)
+    
+    line.add(conf.end_symbol)
 
     var blue = ""
     var green = ""
@@ -57,7 +59,7 @@ proc bar*(data: Data, lablen: int, asum: float, conf: Config, index:int) =
 
     for i in 0..spn:
         sp.add(" ")
-        
+    
     echo &"{number}{sp}{data.label} {line}{ps}{value}{vs}{percentage}{reset}"
 
 # After getting the data and config

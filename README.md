@@ -1,41 +1,5 @@
 ![](https://i.imgur.com/mUL9pTr.jpg)
 
-# Options
-
-```
---symbol=@
-How to fill the bars
-Default: =
-
---density=0.8
-Lower number means longer bars
-Default: 2.5
-
---no-colors
-Don't use colors
-
---reverse
-Reverse from asc to desc
-
---no-padding
-Don't print spaces at top and bottom
-
---no-values
-Don't show the values
-
---no-percentages
-Don't show the percentages
-
---numbers
-Number the bars
-
---nreverse
-Reverse numbers from asc to desc
-
---spacing
-Print a space between each bar
-```
-
 nimbars reads from a data file. It can look like this:
 
 ```
