@@ -1,23 +1,21 @@
 import structs
-import os
-import parseopt
 import strutils
 import nap
 
 proc get_config*(): Config =
-    let source = use_arg(name="source", kind="argument", value="Path of the data file", required=true, help="Path to the data file")
-    let symbol = use_arg(name="symbol", kind="value", value="=", help="Symbol used for the bars")
-    let start_symbol = use_arg(name="start-symbol", kind="value", help="Symbol at the start of bars")
-    let end_symbol = use_arg(name="end-symbol", kind="value", help="Symbol at the end of bars")
-    let density = use_arg(name="density", kind="value", help="The width of the bars")
-    let reverse = use_arg(name="reverse", kind="flag", help="Reverse data order")
-    let nreverse = use_arg(name="nreverse", kind="flag", help="Reverse rank numbers")
-    let no_padding = use_arg(name="no-padding", kind="flag", help="Don't use padding")
-    let no_colors = use_arg(name="no-colors", kind="flag", help="Don't use colors")
-    let no_values = use_arg(name="no-values", kind="flag", help="Don't show values")
-    let numbers = use_arg(name="numbers", kind="flag", help="Show rank numbers")
-    let spacing = use_arg(name="spacing", kind="flag", help="Use extra spacing")
-    let no_percentages = use_arg(name="no-percentages", kind="flag", help="Don't show percentages")
+    let source = add_arg(name="source", kind="argument", value="Path of the data file", required=true, help="Path to the data file")
+    let symbol = add_arg(name="symbol", kind="value", value="=", help="Symbol used for the bars")
+    let start_symbol = add_arg(name="start-symbol", kind="value", help="Symbol at the start of bars")
+    let end_symbol = add_arg(name="end-symbol", kind="value", help="Symbol at the end of bars")
+    let density = add_arg(name="density", kind="value", value="2.5", help="The width of the bars")
+    let reverse = add_arg(name="reverse", kind="flag", help="Reverse data order")
+    let nreverse = add_arg(name="nreverse", kind="flag", help="Reverse rank numbers")
+    let no_padding = add_arg(name="no-padding", kind="flag", help="Don't use padding")
+    let no_colors = add_arg(name="no-colors", kind="flag", help="Don't use colors")
+    let no_values = add_arg(name="no-values", kind="flag", help="Don't show values")
+    let numbers = add_arg(name="numbers", kind="flag", help="Show rank numbers")
+    let spacing = add_arg(name="spacing", kind="flag", help="Use extra spacing")
+    let no_percentages = add_arg(name="no-percentages", kind="flag", help="Don't show percentages")
 
     parse_args()
 
@@ -55,7 +53,7 @@ proc get_config*(): Config =
         title: title, 
         units: units, 
         source: source.value, 
-        density: density.getFloat(2.5), 
+        density: density.getFloat(), 
         symbol: symbol.value, 
         start_symbol: start_symbol.value, 
         end_symbol: end_symbol.value,
