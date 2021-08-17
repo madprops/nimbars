@@ -1,6 +1,6 @@
+import std/strutils
+import pkg/nap
 import structs
-import strutils
-import nap
 
 proc get_config*(): Config =
     let source = add_arg(name="source", kind="argument", value="Path of the data file", required=true, help="Path to the data file")

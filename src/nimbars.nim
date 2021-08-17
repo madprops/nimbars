@@ -1,7 +1,7 @@
+import std/strformat
+import std/terminal
 import bars
 import config
-import strformat
-import terminal
 
 # Print the title if any
 proc show_title(title: string) =

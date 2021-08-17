@@ -1,9 +1,9 @@
-import utils
+import std/terminal
+import std/strutils
+import std/algorithm
+import std/strformat
 import structs
-import terminal
-import strutils
-import algorithm
-import strformat
+import utils
 
 # Print a data item
 proc bar*(data: Data, lablen: int, asum: float, conf: Config, index:int) =

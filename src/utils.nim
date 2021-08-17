@@ -1,5 +1,5 @@
+import std/strutils
 import structs
-import strutils
 
 # Round to 2 decimal places
 proc rounded*(n: float): string =
